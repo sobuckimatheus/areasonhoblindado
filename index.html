@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos do Curso: Sueño Blindado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .modulo {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .modulo-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .modulo-header h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .modulo-header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modulo {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ Sueño Blindado</h1>
+            <p>Curso Completo - Todos os Módulos</p>
+        </header>
+
+        <!-- Módulo 1 -->
+        <div class="modulo">
+            <div class="modulo-header">
+                <h2>Módulo 1</h2>
+                <p>Fundamentos do Sueño Blindado</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <h3>Parte 1</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/cb33e258-1812-4b44-beb1-3f3295d621c9"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Parte 2</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/92540438-27f2-4a4a-803e-fa684d3b22d4"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="modulo">
+            <div class="modulo-header">
+                <h2>Módulo 2</h2>
+                <p>Descrição do Módulo 2</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <h3>Parte 1</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/cbca4a6d-356b-43c0-b104-3a3c3f3402e6"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Parte 2</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/5d2f26f1-f03b-4f75-96b3-db1c0cc05432"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="modulo">
+            <div class="modulo-header">
+                <h2>Módulo 3</h2>
+                <p>Descrição do Módulo 3</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <h3>Parte 1</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/fdd49c23-f56a-4a81-a900-fcf47c110e0c"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Parte 2</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/89883190-16af-4fb7-89d5-2dd02e786e23"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div class="modulo">
+            <div class="modulo-header">
+                <h2>Módulo 4</h2>
+                <p>Descrição do Módulo 4</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <h3>Parte 1</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/43fedb36-44f6-41ae-8fee-42cbecb148de"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Parte 2</h3>
+                    <div class="video-wrapper">
+                        <iframe
+                          src="https://play.tynk.ai/p/c7c5e4be-b0f9-49b9-bffa-c03017798f3c"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
