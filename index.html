@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeos do Curso: Sueño Blindado</title>
+    <title>Sueño Blindado - Área de Membros</title>
     <style>
         * {
             margin: 0;
@@ -19,91 +19,78 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             color: white;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        .modulo {
+        .modulos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .modulo-card {
             background: white;
             border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 40px;
+            padding: 40px 30px;
+            text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
-        .modulo-header {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+        .modulo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        .modulo-header h2 {
-            color: #333;
+        .modulo-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .modulo-card h2 {
+            color: #667eea;
             font-size: 1.8rem;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .modulo-header p {
+        .modulo-card p {
             color: #666;
             font-size: 0.95rem;
-        }
-
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .video-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-card h3 {
-            color: #667eea;
             margin-bottom: 15px;
-            font-size: 1.2rem;
         }
 
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .modulo-badge {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         @media (max-width: 768px) {
@@ -111,12 +98,8 @@
                 font-size: 2rem;
             }
 
-            .videos-grid {
+            .modulos-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .modulo {
-                padding: 20px;
             }
         }
     </style>
@@ -125,129 +108,38 @@
     <div class="container">
         <header>
             <h1>🛡️ Sueño Blindado</h1>
-            <p>Curso Completo - Todos os Módulos</p>
+            <p>Selecione o módulo para acessar as aulas</p>
         </header>
 
-        <!-- Módulo 1 -->
-        <div class="modulo">
-            <div class="modulo-header">
+        <div class="modulos-grid">
+            <a href="modulo1.html" class="modulo-card">
+                <div class="modulo-icon">📚</div>
                 <h2>Módulo 1</h2>
                 <p>Fundamentos do Sueño Blindado</p>
-            </div>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <h3>Parte 1</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/cb33e258-1812-4b44-beb1-3f3295d621c9"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <h3>Parte 2</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/92540438-27f2-4a4a-803e-fa684d3b22d4"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <span class="modulo-badge">2 Vídeos</span>
+            </a>
 
-        <!-- Módulo 2 -->
-        <div class="modulo">
-            <div class="modulo-header">
+            <a href="modulo2.html" class="modulo-card">
+                <div class="modulo-icon">🎯</div>
                 <h2>Módulo 2</h2>
-                <p>Descrição do Módulo 2</p>
-            </div>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <h3>Parte 1</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/cbca4a6d-356b-43c0-b104-3a3c3f3402e6"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <h3>Parte 2</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/5d2f26f1-f03b-4f75-96b3-db1c0cc05432"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>Aprofundando conceitos</p>
+                <span class="modulo-badge">2 Vídeos</span>
+            </a>
 
-        <!-- Módulo 3 -->
-        <div class="modulo">
-            <div class="modulo-header">
+            <a href="modulo3.html" class="modulo-card">
+                <div class="modulo-icon">⚡</div>
                 <h2>Módulo 3</h2>
-                <p>Descrição do Módulo 3</p>
-            </div>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <h3>Parte 1</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/fdd49c23-f56a-4a81-a900-fcf47c110e0c"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <h3>Parte 2</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/89883190-16af-4fb7-89d5-2dd02e786e23"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>Técnicas avançadas</p>
+                <span class="modulo-badge">2 Vídeos</span>
+            </a>
 
-        <!-- Módulo 4 -->
-        <div class="modulo">
-            <div class="modulo-header">
+            <a href="modulo4.html" class="modulo-card">
+                <div class="modulo-icon">🏆</div>
                 <h2>Módulo 4</h2>
-                <p>Descrição do Módulo 4</p>
-            </div>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <h3>Parte 1</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/43fedb36-44f6-41ae-8fee-42cbecb148de"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <h3>Parte 2</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/c7c5e4be-b0f9-49b9-bffa-c03017798f3c"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+                <p>Dominando o método</p>
+                <span class="modulo-badge">2 Vídeos</span>
+            </a>
         </div>
-
     </div>
 </body>
 </html>
