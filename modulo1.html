@@ -65,27 +65,48 @@
             font-size: 0.95rem;
         }
 
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        .tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
         }
 
-        .video-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s ease;
+        .tab-button {
+            padding: 15px 30px;
+            background: transparent;
+            border: none;
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            bottom: -2px;
         }
 
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-card h3 {
+        .tab-button:hover {
             color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+        }
+
+        .tab-button.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .video-container {
+            display: none;
+        }
+
+        .video-container.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .video-wrapper {
@@ -93,8 +114,9 @@
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             background: #000;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
         .video-wrapper iframe {
@@ -151,12 +173,17 @@
                 font-size: 2rem;
             }
 
-            .videos-grid {
-                grid-template-columns: 1fr;
-            }
-
             .modulo {
                 padding: 20px;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-button {
+                flex: 1;
+                min-width: 120px;
             }
 
             .navigation {
@@ -182,26 +209,29 @@
                 <h2>Módulo 1</h2>
                 <p>La Regresión de los 4 Meses</p>
             </div>
-            <div class="videos-grid">
-                <div class="video-card">
-                    <h3>Parte 1</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/cb33e258-1812-4b44-beb1-3f3295d621c9"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
+
+            <div class="tabs">
+                <button class="tab-button active" onclick="showVideo(1)">📹 Parte 1</button>
+                <button class="tab-button" onclick="showVideo(2)">📹 Parte 2</button>
+            </div>
+
+            <div id="video1" class="video-container active">
+                <div class="video-wrapper">
+                    <iframe
+                      src="https://play.tynk.ai/p/cb33e258-1812-4b44-beb1-3f3295d621c9"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
                 </div>
-                <div class="video-card">
-                    <h3>Parte 2</h3>
-                    <div class="video-wrapper">
-                        <iframe
-                          src="https://play.tynk.ai/p/92540438-27f2-4a4a-803e-fa684d3b22d4"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
+            </div>
+
+            <div id="video2" class="video-container">
+                <div class="video-wrapper">
+                    <iframe
+                      src="https://play.tynk.ai/p/92540438-27f2-4a4a-803e-fa684d3b22d4"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
                 </div>
             </div>
 
@@ -215,5 +245,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function showVideo(videoNumber) {
+            // Hide all videos
+            document.querySelectorAll('.video-container').forEach(container => {
+                container.classList.remove('active');
+            });
+
+            // Remove active from all tabs
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected video
+            document.getElementById('video' + videoNumber).classList.add('active');
+
+            // Activate selected tab
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
