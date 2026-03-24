@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueño Blindado - Área de Membros</title>
+    <title>Área de Membros - Cursos</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -38,6 +38,18 @@
         header p {
             font-size: 1.2rem;
             opacity: 0.9;
+        }
+
+        .curso-section {
+            margin-bottom: 60px;
+        }
+
+        .curso-title {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .modulos-grid {
@@ -107,38 +119,76 @@
 <body>
     <div class="container">
         <header>
-            <h1>🛡️ Sueño Blindado</h1>
-            <p>Selecione o módulo para acessar as aulas</p>
+            <h1>📚 Área de Membros</h1>
+            <p>Selecione o curso e módulo para acessar as aulas</p>
         </header>
 
-        <div class="modulos-grid">
-            <a href="modulo1.html" class="modulo-card">
-                <div class="modulo-icon">👶</div>
-                <h2>Módulo 1</h2>
-                <p>La Regresión de los 4 Meses</p>
-                <span class="modulo-badge">2 Vídeos</span>
-            </a>
+        <!-- Curso: Sueño Blindado -->
+        <div class="curso-section">
+            <h2 class="curso-title">🛡️ Sueño Blindado</h2>
+            <div class="modulos-grid">
+                <a href="modulo1.html" class="modulo-card">
+                    <div class="modulo-icon">👶</div>
+                    <h2>Módulo 1</h2>
+                    <p>La Regresión de los 4 Meses</p>
+                    <span class="modulo-badge">2 Vídeos</span>
+                </a>
 
-            <a href="modulo2.html" class="modulo-card">
-                <div class="modulo-icon">🍼</div>
-                <h2>Módulo 2</h2>
-                <p>La Regresión de los 8-10 Meses</p>
-                <span class="modulo-badge">2 Vídeos</span>
-            </a>
+                <a href="modulo2.html" class="modulo-card">
+                    <div class="modulo-icon">🍼</div>
+                    <h2>Módulo 2</h2>
+                    <p>La Regresión de los 8-10 Meses</p>
+                    <span class="modulo-badge">2 Vídeos</span>
+                </a>
 
-            <a href="modulo3.html" class="modulo-card">
-                <div class="modulo-icon">🎂</div>
-                <h2>Módulo 3</h2>
-                <p>La Regresión de los 12 Meses</p>
-                <span class="modulo-badge">2 Vídeos</span>
-            </a>
+                <a href="modulo3.html" class="modulo-card">
+                    <div class="modulo-icon">🎂</div>
+                    <h2>Módulo 3</h2>
+                    <p>La Regresión de los 12 Meses</p>
+                    <span class="modulo-badge">2 Vídeos</span>
+                </a>
 
-            <a href="modulo4.html" class="modulo-card">
-                <div class="modulo-icon">🌟</div>
-                <h2>Módulo 4</h2>
-                <p>La Regresión de los 18 Meses</p>
-                <span class="modulo-badge">2 Vídeos</span>
-            </a>
+                <a href="modulo4.html" class="modulo-card">
+                    <div class="modulo-icon">🌟</div>
+                    <h2>Módulo 4</h2>
+                    <p>La Regresión de los 18 Meses</p>
+                    <span class="modulo-badge">2 Vídeos</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Curso: Destete Nocturno -->
+        <div class="curso-section">
+            <h2 class="curso-title">🌙 Destete Nocturno</h2>
+            <div class="modulos-grid">
+                <a href="destete-modulo1.html" class="modulo-card">
+                    <div class="modulo-icon">🌜</div>
+                    <h2>Módulo 1</h2>
+                    <p>El Problema Que Nadie Te Explicó</p>
+                    <span class="modulo-badge">1 Vídeo</span>
+                </a>
+
+                <a href="destete-modulo2.html" class="modulo-card">
+                    <div class="modulo-icon">⭐</div>
+                    <h2>Módulo 2</h2>
+                    <p>El Protocolo de las 7 Noches</p>
+                    <span class="modulo-badge">1 Vídeo</span>
+                </a>
+
+                <a href="destete-modulo3.html" class="modulo-card">
+                    <div class="modulo-icon">💫</div>
+                    <h2>Módulo 3</h2>
+                    <p>Cómo Consolar Sin el Pecho y Proteger tu Leche</p>
+                    <span class="modulo-badge">1 Vídeo</span>
+                </a>
+
+                <a href="destete-modulo4.html" class="modulo-card">
+                    <div class="modulo-icon">✨</div>
+                    <h2>Módulo 4</h2>
+                    <p>Situaciones Especiales y Recaídas</p>
+                    <span class="modulo-badge">1 Vídeo</span>
+                </a>
+            </div>
         </div>
     </div>
 </body>
